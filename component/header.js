@@ -7,7 +7,7 @@ function header() {
         class="new-todo" 
         placeholder="What needs to be done?" 
         autofocus 
-        onkeyup="event.keyCode === 13 && this.value.trim() != '' && dispatch('ADD', this.value.trim())"
+        onkeyup="event.keyCode === 13 && this.value.trim() != '' && dispatch('ADD', this.value.trim()) && console.log(this)"
     >
 </header>`
 }

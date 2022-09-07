@@ -47,7 +47,6 @@ const actions = {
 }
 
 export default function reducer(state = init, action, ...args) {
-    console.log(args)
     actions[action] && actions[action](state, ...args)
     return state
 }

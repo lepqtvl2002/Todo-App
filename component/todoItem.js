@@ -5,7 +5,9 @@ function todoItem({ todo, index }) {
     return html`<li 
     class="${todo && todo.completed && 'completed'}" 
     data-index="${index}"
-    ondblclick="{this.focus() ;this.classList.add('editing')}"
+    ondblclick="{this.classList.add('editing');
+        const _this = this; 
+        _this.querySelector('input.edit').focus()}"
     >
     <div class="view">
         <input 
